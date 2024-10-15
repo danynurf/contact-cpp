@@ -5,6 +5,8 @@
 #include <vector>
 #include <string>
 #include "../../model/header/Contact.hpp"
+#include "../../model/header/Person.hpp"
+#include "PersonService.hpp"
 
 using std::cout;
 using std::cin;
@@ -17,8 +19,11 @@ using std::endl;
 class ContactService {
 private:
     vector<Contact> contacts;
+    PersonService* personSrv;
 
 public:
+    ContactService();
+    ContactService(PersonService* personSrv);
     void addContact();
     void showContacts();
 };

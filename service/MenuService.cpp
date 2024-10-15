@@ -4,10 +4,13 @@ MenuService::MenuService() {
     this->menus = {
         "Add Contact", "Show Contact"
     };
-    this->contactSrv = new ContactService();
+    this->helperSrv = new HelperService();
+    this->personSrv = new PersonService();
+    this->contactSrv = new ContactService(this->personSrv);
 }
 
 void MenuService::showMenus() {
+    cout << endl << "App Pengelola Kontak" << endl;
     int i = 0;
     for(string menu : this->menus) {
         cout << ++i << ". " << menu << endl;

@@ -2,11 +2,15 @@
 
 Contact::Contact() {}
 
-Contact::Contact(string name, string nik, string no):
-person({name, nik}), no(no) {}
+Contact::Contact(string no):
+no(no) {}
 
 string Contact::getNo() {
     return this->no;
+}
+
+void Contact::setPerson(Person person) {
+    this->person = person;
 }
 
 Person Contact::getPerson() {

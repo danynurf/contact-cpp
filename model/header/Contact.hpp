@@ -13,8 +13,9 @@ private:
 
 public:
     Contact();
-    Contact(string name, string nik, string no);
+    Contact(string no);
     string getNo();
+    void setPerson(Person person);
     Person getPerson();
 };
 

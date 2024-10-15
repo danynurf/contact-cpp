@@ -5,6 +5,7 @@
 #include <vector>
 #include "HelperService.hpp"
 #include "ContactService.hpp"
+#include "PersonService.hpp"
 
 using std::string;
 using std::vector;
@@ -16,6 +17,7 @@ private:
     vector<string> menus;
     HelperService* helperSrv;
     ContactService* contactSrv;
+    PersonService* personSrv;
 
 public:
     MenuService();
